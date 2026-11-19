@@ -176,21 +176,3 @@ records zero skipped episodes. Warnings remain visible even when validation pass
 | Broken `assets/` or `upstream/` link | Restore its target, or copy the actual target contents into the export |
 | Manifest/hash mismatch | Restore the pinned inputs and convert into a fresh directory; investigate unexpected changes |
 | Validation passes with warnings | Read the issue log; a passing structural check does not resolve missing timing or alignment |
-
-## 6. Source code and local clutter
-
-The core scripts are `download_original.py`, `convert_original.py` and
-`validate_original.py`. Their helpers are `original_io.py` (I/O, hashes, video
-inspection and IDs), `selection_check.py` (selection integrity) and
-`state_reader.py` (reads source object arrays without executing pickle callables).
-The validator checks source-to-output mapping independently of the converter.
-
-Keep the pinned `mapping.json`, `selection.json`, `source_context.json`,
-`download_manifest.json` and `upstream/` files with the code. The source inventory
-and recovery code excerpts are validation evidence, including the duration rule;
-they are not demo programs. Keep their accompanying licenses as well.
-
-Generated outputs, downloaded assets, examples and logs are ignored by Git.
-`archive/` is also ignored and retains earlier converters, audits, tests and
-inspection demos locally. None is imported by the core program. The optional
-historical regression suite is described in [the archive README](archive/README.md).
