@@ -1,0 +1,27 @@
+# Local Python environment and tool caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+
+# Historical experiments, demo images, checkpoints and regression fixtures.
+# Retained locally for reference; not required to run the current converter.
+/archive/
+
+# Original source media is restored with download_original.py.
+/roboarena_original_conversion/assets/roboarena/
+
+# Generated exports and reports. Keep selection, mapping, source context,
+# download manifest and upstream evidence: these are required inputs.
+/roboarena_original_conversion/trajectories.jsonl
+/roboarena_original_conversion/id_map.csv
+/roboarena_original_conversion/issues.jsonl
+/roboarena_original_conversion/summary.json
+/roboarena_original_conversion/dataset_manifest.json
+/roboarena_original_conversion/validation_report.json
+/roboarena_original_conversion/examples/
+/roboarena_original_conversion/logs/
+/exports/
+*.partial

@@ -1,0 +1,14 @@
+{
+  "repo_id": "RoboArena/DataDump_08-05-2025",
+  "revision": "012901aa47d29f34ccfa8c9472587a97e52a3d62",
+  "purpose": "source_conversion",
+  "published_viewer_split": "test",
+  "split_evidence_url": "https://huggingface.co/datasets/RoboArena/DataDump_08-05-2025",
+  "training_export": false,
+  "source_session_count": 796,
+  "source_policy_episode_count": 4613,
+  "record_budget": 5000,
+  "layout": "primary original camera plus original state per policy episode",
+  "authorization": "User authorized using the original collection in this chat on 2026-11-11; previous 5,000-record ceiling retained.",
+  "scope_note": "Original source split remains test. This conversion does not relabel it as training or claim alignment with earlier regenerated RBM UUIDs."
+}

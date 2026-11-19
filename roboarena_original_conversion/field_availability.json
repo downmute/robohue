@@ -1,0 +1,81 @@
+{
+  "source_record_count": 4613,
+  "note": "All 4,613 source episodes checked against original YAML, media and state arrays. Null entries below are explicit source/mapping absences, not hidden conversion failures.",
+  "direct_source_fields_present_in_all": [
+    "explicit_binary_success",
+    "episode_partial_success",
+    "evaluator_name",
+    "evaluation_location",
+    "session_creation_timestamp",
+    "session_completion_timestamp",
+    "source_session_and_policy_ids",
+    "original_camera_locator",
+    "original_state_locator"
+  ],
+  "remaining_nulls": {
+    "task.task_id": "No stable task identifier or agreed namespace in this source",
+    "media.timestamps_s": "No verified physical timestamp for each frame",
+    "media.sync_ref": "No verified camera/state synchronization mapping",
+    "track.timestamps_s": "No timestamp field exists in any of the 4,613 validated source state arrays",
+    "track.alignment_to_video": "No verified sample-to-frame mapping",
+    "track.units": "Units not documented in source mapping",
+    "outcome.quality_label": "No original quality category field",
+    "outcome_signature": "Not supplied",
+    "measurement_ref": "Explicitly absent for Task A"
+  },
+  "remaining_empty_lists": {
+    "target_refs": "No mapped dense targets/masks supplied",
+    "cache_refs": "No cache/prediction arrays supplied in this original collection",
+    "derivation_ids": "No supplied derivation links"
+  },
+  "not_null_anymore": [
+    "source.execution_id",
+    "media.camera_id",
+    "track",
+    "outcome.success",
+    "outcome.partial_success",
+    "outcome.partial_success.label_source",
+    "source.policy_duration_units"
+  ],
+  "intentional_non_features": [
+    "No embeddings generated",
+    "No derived quality category",
+    "No per-frame progress labels",
+    "No guessed cross-export ID matching",
+    "No training split reassignment",
+    "No full extra-camera download"
+  ],
+  "verified_record_count": 4613,
+  "null_counts": {
+    "task.task_id": 4613,
+    "media.timestamps_s": 4613,
+    "media.sync_ref": 4613,
+    "track.timestamps_s": 4613,
+    "track.alignment_to_video": 4613,
+    "track.units": 4613,
+    "outcome.quality_label": 4613,
+    "outcome_signature": 4613,
+    "measurement_ref": 4613
+  },
+  "state_field_sets": [
+    [
+      "action",
+      "cartesian_position",
+      "gripper_position",
+      "joint_position"
+    ]
+  ],
+  "state_nonfinite_value_count": 0,
+  "explicit_success_count": 4613,
+  "completion_count": 4613,
+  "attribution_nonempty_count": 4613,
+  "full_validation_passed": true,
+  "verified_video_files": 4613,
+  "verified_state_files": 4613,
+  "recovered_duration_definition": {
+    "populated_count": 4613,
+    "units": "control_step_index",
+    "semantics": "Final zero-based control-step index; state_sample_count equals raw duration + 1 in every record",
+    "mapping_version": "robohue_roboarena_collection_v2"
+  }
+}

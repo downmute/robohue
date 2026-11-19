@@ -1,0 +1,41 @@
+{
+  "mapping_version": "robohue_roboarena_collection_v2",
+  "schema_version": "robohue.data.v1.1",
+  "repo_id": "RoboArena/DataDump_08-05-2025",
+  "revision": "012901aa47d29f34ccfa8c9472587a97e52a3d62",
+  "original_split": "test",
+  "split_scope": "Published viewer assignment for this snapshot; no per-policy train/test assignment is present in YAML",
+  "success_decode": {
+    "0": false,
+    "1": true
+  },
+  "success_rule": "Decode the explicit policies.<id>.binary_success integer 0/1 only; no derivation from completion or quality",
+  "completion_rule": "Copy policies.<id>.partial_success unchanged, as an episode-level [0,1] annotation",
+  "quality_rule": "null: no quality_label category supplied by this original collection",
+  "instruction_rule": "Copy language_instruction exactly",
+  "task_id_rule": "null: no stable semantic task ID supplied",
+  "identity_rule": "roboarena:{URL-quoted repo}:{full revision}:{URL-quoted session_id}:{URL-quoted policy_id}",
+  "execution_rule": "Copy the exact source policy-directory locator; original folder explicitly groups one policy rollout, camera views and state file",
+  "family_rule": "Self trajectory ID; provisional derivation family, no cross-dataset identity claims",
+  "leakage_rule": "Conservative session-level group from explicit shared source session; final cross-dataset deduplication remains unresolved",
+  "camera_rule": "One original primary video per policy episode, prefer left, then right, then wrist; preserve other original camera locators as remote refs",
+  "time_rule": "Preserve original session timestamps in source; per-frame physical timestamps and camera/state sync remain null",
+  "state_rule": "Reference original NPZ data object-array without changing values; non-executing reader validates each numeric field and its original shape; retain sample order without assumed video alignment",
+  "duration_rule": "Copy raw duration unchanged. Historical evaluator code uploads t_step from a zero-based control loop. Its meaning is the final control-step index; all 4,613 NPZ sample counts equal duration + 1. It is not elapsed seconds.",
+  "attribution_rule": "Copy evaluator_name and evaluation_location with YAML field references; do not invent new user IDs or feedback events",
+  "unmapped_rule": "Keep complete immutable YAML, including preferences and feedback; list unmapped fields, create no new preference labels",
+  "training_approved": false,
+  "duration_units": "control_step_index",
+  "duration_evidence": [
+    {
+      "url": "https://github.com/pranavatreya/roboarena_evaluator/blob/81df8b8766fefcbab95fc01dfd223f2249946c25/evaluation_client/main.py#L412",
+      "local_path": "upstream/recovery/pranavatreya__roboarena_evaluator_main.py",
+      "sha256": "bd28221b338ba51f4f5db8edd8cf351577c77c57bac4d819a9f44aa0b50bae57"
+    },
+    {
+      "url": "https://github.com/penn-pal-lab/real_eval/blob/1aa912551b444f7818b61519d578c705c72d4fff/evaluation_client/main.py#L349",
+      "local_path": "upstream/recovery/penn-pal-lab__real_eval_main.py",
+      "sha256": "7ac5318cb23bcbaf671a6661caca39990050a6459faf580a51cd3cd0b51c2271"
+    }
+  ]
+}
